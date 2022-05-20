@@ -1,0 +1,45 @@
+{
+  "type": "module",
+  "name": "@jaredpdesigns/svgToJSON",
+  "authors": [
+    "Jared Pendergraft (https://jaredpendergraft.com)"
+  ],
+  "version": "1.0.0",
+  "description": "Script to convert folder of SVGs into portable formats",
+  "license": "UNLICENSED",
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "unpkg": "./index.js",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.js"
+    }
+  },
+  "scripts": {
+    "build": "svgo -f svg --config svgo.config.json && node buildFromSVG.js && prettier --trailing-comma es5 --write '**/*.{js,cjs,json}'",
+    "buildFromData": "node buildFromJSON.js && svgo -f svg --config svgo.config.json"
+  },
+  "files": [
+    "buildFromJSON.js",
+    "buildFromSVG.js",
+    "data",
+    "index.cjs",
+    "index.js",
+    "svg",
+    "svgo.config.json"
+  ],
+  "keywords": [
+    "icons",
+    "logos",
+    "svg",
+    "jared pendergraft"
+  ],
+  "repository": "",
+  "types": "index.d.ts",
+  "dependencies": {
+    "node-html-parser": "^5.3.3",
+    "prettier": "^2.6.2",
+    "svgo": "^2.8.0"
+  }
+}

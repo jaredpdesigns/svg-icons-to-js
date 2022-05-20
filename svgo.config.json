@@ -1,0 +1,23 @@
+{
+  "multipass": true,
+  "js2svg": {
+    "indent": 2,
+    "pretty": true
+  },
+  "plugins": [
+    {
+      "name": "preset-default",
+      "params": {
+        "overrides": {
+          "convertColors": {
+            "currentColor": "#000000"
+          },
+          "moveElemsAttrsToGroup": false,
+          "removeDoctype": false,
+          "removeViewBox": false
+        }
+      }
+    },
+    "sortAttrs"
+  ]
+}
