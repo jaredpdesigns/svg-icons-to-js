@@ -25,3 +25,19 @@ yarn buildFromData
 ```
 
 The results will be new icons placed in the `svg` folder.
+
+## Create Directory of PNGs
+
+If you need icons in both SVG and PNG format, you can optionally run:
+
+```bash
+yarn buildPNGs
+```
+
+The result will be a folder of all your icons in PNG format in both 1x and 2x variants. 
+
+Optionally, you can pass in an army of scale arguments to return multiple sizes past the 1x and 2x variants:
+
+```bash
+yarn buildPNGs {1,2,3,4}
+```

@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "svgo -f svg --config svgo.config.json && node buildFromSVG.js && prettier --trailing-comma es5 --write '**/*.{js,cjs,json}'",
-    "buildFromData": "node buildFromJSON.js && svgo -f svg --config svgo.config.json"
+    "buildFromData": "node buildFromJSON.js && svgo -f svg --config svgo.config.json",
+    "buildPNGs": "node buildToImages.js"
   },
   "files": [
     "buildFromJSON.js",
@@ -40,6 +41,7 @@
   "dependencies": {
     "node-html-parser": "^5.3.3",
     "prettier": "^2.6.2",
+    "svg2img": "^1.0.0-beta.1",
     "svgo": "^2.8.0"
   }
 }
